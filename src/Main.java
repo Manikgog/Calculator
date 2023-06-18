@@ -23,10 +23,10 @@ class DivisionByZeroException extends Exception
 }
 class Calculator
 {
-    private int operand1_;
-    private int operand2_;
-    private char operator_;
-    private boolean isArabicDigit_ = true;
+    int operand1_;
+    int operand2_;
+    char operator_;
+    boolean isArabicDigit_ = true;
     Calculator(int operand1, int operand2, char operator)
     {
         operand1_ = operand1;
@@ -96,7 +96,7 @@ class Calculator
     }
 
     // преобразование римской цифры в арабскую
-    private int ToRomDigit(String operand)
+    int ToRomDigit(String operand)
     {
         int RomDigit = 0;
         int sign = 1;
@@ -245,7 +245,7 @@ class Calculator
 
 
 public class Main {
-    public static String calc(String input)
+    static String calc(String input)
     {
         try {
             Calculator c = new Calculator(input);
